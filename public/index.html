@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎵 Selectors - Agregador de Conciertos</title>
+  <meta name="description" content="Descubre eventos de conciertos de Eventbrite y Ticketmaster en un solo lugar">
+  <meta name="keywords" content="conciertos, eventos, música, ticketmaster, eventbrite, españa">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎵 Selectors</h1>
+      <p>Agregador de Eventos Musicales - Eventbrite + Ticketmaster</p>
+    </header>
+
+    <div class="search-section">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Busca conciertos, artistas, locaciones..."
+      >
+      <select id="sourceFilter">
+        <option value="all">Todas las fuentes</option>
+        <option value="eventbrite">Eventbrite</option>
+        <option value="ticketmaster">Ticketmaster</option>
+      </select>
+      <button id="searchBtn">🔍 Buscar</button>
+    </div>
+
+    <div id="error" style="display: none;"></div>
+    <div id="loading" class="loading" style="display: none;">Cargando eventos...</div>
+    
+    <div id="eventsContainer" class="events-grid">
+      <div class="empty-state">Cargando eventos...</div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
